@@ -1,0 +1,58 @@
+*,ul,li{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar.navbar-dark{
+    background-color: #121213;
+}
+
+.nav-link{
+color: white;
+}
+
+.nav-link:hover{
+    color: #2D9BF0;
+    transition: .20s ease-in;
+}
+
+.nav-link:hover path{
+    fill: #2D9BF0;
+    transition: .20s ease-in;
+}
+
+.dropdown-menu{
+    background-color: #121213;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #2D9BF0;
+    transition: .20s ease-in;
+}
+
+.nav-link.dropdown-toggle.show{
+    color: #2D9BF0;  
+}
+
+.offcanvas{
+    background-color: #121213;
+    color: white;
+}
+
+.subscribe{
+    color: yellow;
+}
+.subscribe:hover{
+    color: #f5f543;
+    text-shadow: 1px 0px #face2d;
+    transition: .20s ease-in;
+}
+
+.login__icon{
+    width: 25px;
+}
+
+.login__text{
+    font-size: 12px;
+    font-weight: 500;
+}

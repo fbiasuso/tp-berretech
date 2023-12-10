@@ -1,0 +1,246 @@
+#hero{
+    background: url('../img/hero_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 81vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.welcome{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.welcome__btn-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.welcome__btn{
+    display: inline-block;
+    width: 170px;
+    padding: 5px 10px;
+    background-color: #2D9BF0;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.welcome__btn:hover{
+    color: #193e63;
+    background-color: white;
+    transition: .20s ease-in;
+}
+
+.welcome__btn--secundary{
+    background-color: transparent;
+    color:#2D9BF0;
+    border: 1px solid #2D9BF0;
+
+}
+
+.welcome__btn--secundary:hover{
+    border:1px solid white;
+    transition: .20s ease-in;
+}
+
+.news{
+    padding-bottom: 30px;
+}
+
+h3{
+    font-size: 12px;
+}
+
+.card-news__author{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.card-news{
+    margin-bottom: 40px;
+}
+
+.card-news__image{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-news__btn{
+    display: inline-block;
+    width:150px;
+    padding: 5px 10px;
+    background-color: #2D9BF0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card-news__btn:hover{
+    color: white;
+    opacity: 0.5;
+    transition: .20s ease-in;
+}
+
+.card-news__category{
+    text-decoration: none;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.pagination__nav{
+    display:flex;
+}
+
+.pagination__btn{
+    padding: 5px 7px;
+    border: 1px solid #486885;
+    /* #676c71 */
+    background-color: #193e63;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.pagination__btn:hover{
+    background-color: #2D9BF0;
+    color:white;
+    transition: .20s ease-in;
+}
+
+.pagination__btn--active{
+    color: white;
+    background-color: #2D9BF0;
+}
+
+.pagination__btn--disabled{
+    cursor: not-allowed;
+
+}
+
+.pagination__btn--disabled:hover{
+    background-color: #193e63;
+    transition: none;
+}
+
+aside{
+    background-color: #193e63;
+    color: white;
+    font-size: 14px;
+}
+
+.search{
+    position: relative;
+    margin: 15px auto;
+}
+
+.search__input{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.7rem 0.375rem 0.75rem;
+    box-sizing: border-box;
+}
+
+.search__icon{
+    position: absolute;
+    top:50%;
+    right:0px;
+    padding: 7px 10px;
+    /* background-color: #676c71; */
+    transform: translateY(-50%);
+    color: white;
+    border: 1px solid #676c71;
+
+}
+
+.search__icon path{
+    fill:white;
+}
+
+.category__title{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.category__list{
+    margin-left: 40px;
+    list-style-type: square;
+}
+
+aside a{
+    color: white;
+    text-decoration: none;
+}
+
+aside li:hover, aside a:hover, summary:hover{
+    color: #2D9BF0;
+    transition: all .20s ease-in;
+    
+}
+
+details{
+    margin-bottom: 15px;
+}
+
+details[open] > summary:first-of-type {
+    color:#2D9BF0;
+}
+
+aside .card-news__btn:hover{
+    color: #193e63;
+    background-color: #f8f9fa;
+    transition: .20s ease-in;
+    opacity: 1;
+}
+
+.gallery{
+    padding: 15px 0;
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+.gallery__img{
+    width: 100%;
+    margin: 10px auto;
+}
+
+
+@media screen and (max-width:768px ) {
+    
+    #hero{
+        background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3598214285714286) 40%), url('../img/hero_blue_logo2.jpg');
+        background-size: cover;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .welcome{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

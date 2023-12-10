@@ -1,0 +1,50 @@
+body{
+    background: rgb(147, 14, 14);
+    color:white;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+    height: 100vh;
+}
+
+.imagen{
+     width: 100%;
+     
+}
+.h1{
+    margin: 30px;
+    text-align: center;
+}
+
+.miniatura{
+    transform: none;
+}
+.miniatura:hover{
+    transform: scale(1.2);
+    transition: all .20s ease-in;
+}
+
+.descripcion_imagen{
+    background-color: black;
+    color: white;
+}
+
+.chica{
+    height: 162px;
+}
+
+@media  (max-width: 576px){
+    .chica{
+        height: 380px;
+    }
+    
+    main{
+        height: 100%;
+        margin-top: 70px;
+    }
+}

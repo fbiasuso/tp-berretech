@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.new{
+    width: 100%;
+    max-width: 992px;
+    margin: 80px auto;
+}
+
+.news__author{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+.new__image{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+
+}
+.comments__form{
+    text-align: center;
+  
+}
+.form{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    gap:15px;
+    margin: auto;
+    
+
+}
+
+.form__inputs{
+    width: 48%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 3px solid #676c71;
+    
+}
+.form__comment{
+    width:100%;
+    border-radius: 10px;
+    border: 3px solid #676c71;
+}
+.form__inputs:focus, .form__inputs:focus-visible, 
+.form__comment:focus, .form__comment:focus-visible{
+   
+    border: 3px solid #2D9BF0;
+    outline: #2D9BF0;
+    transition: all .20s ease-in;
+}
+
+.form__btn{
+    width:100%;
+    background-color: #2D9BF0;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.comments__list{
+    display:flex;
+    flex-direction: column;
+    width:90%;
+    gap:15px;
+}
+
+.card-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:15px;
+    background-color: #193e63;
+    border-radius: 57px 10px 10px 57px
+}
+
+.card-comment__img-container{
+    display: flex;
+   }
+.card-comment__img{
+    align-self: center;
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+}
+
+.card-comment__text{
+   color:white;
+}
+
+.card-comment__text a{
+    color:#2D9BF0;
+    padding: 10px;
+}
+
+.card-comment__text a:hover{
+    color:#9bc9ec;
+}
+
+.card-comment_title{
+    padding-top: 10px;
+}
+
+.comments__btn{
+    align-self: center;
+    text-align: center;
+    width:30%;
+    background-color: #2D9BF0;
+    color: white;
+    border-radius: 10px;
+}
+
+.comments__btn:hover, .form__btn:hover{
+    opacity: 0.7;
+}
+
+@media (max-width:992px){
+    .new{
+        width:80%;
+
+    }
+
+    .card-comment{
+        border-radius: 10px 10px 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .comments__btn{
+        width:80%;
+    }
+}
