@@ -6,21 +6,52 @@
     align-items: center;
     position: relative;
 }
+
+.form-container{
+    position: absolute;
+    right: 10%;
+}
+
 form {
-    background-color: rgb(123 125 141 / 65%);
-    width: 300px;
-    height: 160px;
+    /* background-color: rgb(123 125 141 / 65%); */
+    background: rgba(255, 255, 255, 0.2);
+    /* border-radius: 5%; */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+     width: 300px;
+    /* height: 168px; */
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 15px;
     gap: 12px;
-    position: absolute;
-    right: 10%;
-    color: rgb(12, 11, 11);
-    border-radius: 5%;
+    color: white;
+    
 }
+.forgot {
+    margin-top: 15px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    display: block;
+       
+}
+
+.forgot:hover {
+    color:#2D9BF0;
+       
+}
+
+
 .boton {
     width: 100px;
     align-self: center;
+}
+.validationError{
+    color: #ff0000;
+    text-shadow: 1px 2px 5px black;
+    font-size: 14px;
 }
