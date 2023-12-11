@@ -1,0 +1,30 @@
+.navbar {
+  background-color: black;
+  color: white;
+}
+.postList {
+  background-color: violet;
+}
+.postList_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: green;
+}
+.postList_title {
+  background-color: blue;
+}
+
+.postList_btn {
+  background-color: brown;
+}
+.postList_body {
+  background-color: rgb(238, 255, 0);
+}
+.table {
+  background-color: red;
+}
+footer {
+  background-color: black;
+  color: white;
+}
