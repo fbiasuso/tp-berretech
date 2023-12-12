@@ -1,30 +1,68 @@
-.navbar {
-  background-color: black;
-  color: white;
+html{
+  position:relative;
 }
+
+body{
+  margin-bottom: 236px;
+}
+
 .postList {
-  background-color: violet;
+  height: 100vh;
 }
-.postList_head {
+.postList__head {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: green;
+  
 }
-.postList_title {
+.postList__title {
   background-color: blue;
 }
-
-.postList_btn {
-  background-color: brown;
+.modal-content{
+  background-color: #193e63;
+  color: white;
 }
-.postList_body {
+.btn-close{
+  background-color: white;
+}
+
+.postList__btn {
+    display: inline-block;
+    width: 170px;
+    padding: 5px 10px;
+    background-color: #2D9BF0;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}
+.postList__btn:hover{
+  color: #193e63;
+  background-color: white;
+  transition: .20s ease-in;
+}
+.postList__btn--save{
+
+}
+.postList__btn--cancel{
+    background-color: transparent;
+    color:#2D9BF0;
+    border: 1px solid #2D9BF0;
+}
+
+.postList__btn--cancel:hover{
+  border:1px solid white;
+    transition: .20s ease-in;
+}
+
+.postList__body {
   background-color: rgb(238, 255, 0);
 }
 .table {
   background-color: red;
 }
-footer {
-  background-color: black;
-  color: white;
+
+@media screen and (max-width:992px ) {
+  body{
+      margin-bottom: 476px;
+  }
 }
