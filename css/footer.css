@@ -2,6 +2,9 @@
   padding-top: 10px;
   background-color: #121213;
   color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footerlogo {
