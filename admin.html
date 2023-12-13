@@ -15,7 +15,7 @@
     <title>Administrador</title>
   </head>
     
-<body class="postList">
+<body class="postList" onload="showPosts()">
   <header>
     <nav class="navbar navbar-dark navbar-expand-lg abs-top">
       <div class="container-fluid">
@@ -181,14 +181,51 @@
     </nav>
   </header>
       <div class="postList__head">
-        <h2 class="postList__title">elemento 1</h2>
+        <h2 class="postList__title">Lista de Posts</h2>
         <button class="postList__btn postList__btn--newPost" id="newPost" data-bs-toggle="modal" data-bs-target="#newPostModal">
             Agregar Nuevo Post
         </button>
       </div>
       <div class="postList__body">
-        <table class="table">
-          Tabla
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Extracto</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Publicado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody" class="table-group-divider">
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Otto</td>
+              <td>Borrar | Editar | Destacar</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Lenguajes de Programación Populares y sus Aplicaciones en el Mundo
+                Real</td>
+              <td>La elección de un lenguaje de programación es una de las
+                decisiones más cruciales que un desarrollador debe tomar.
+                Diferentes lenguajes ofrecen diferentes características y
+                ventajas, y conocer su aplicación en el mundo....</td>
+              <td>Pablo</td>
+              <td>Programación</td>
+              <td>25/09/2023</td>
+              <td>Sí</td>
+              <td>Borrar | Editar | Destacar</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <!-- Modal -->
