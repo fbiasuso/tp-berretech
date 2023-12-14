@@ -198,17 +198,17 @@
           </p>
         </div>
        <div class="form__container">
-                <form action="./login.html"  class="form" name="registerForm" id="registerForm">
+                <form action="./login.html"  class="form" name="registerForm" id="registerForm" onsubmit="event.preventDefault()">
                     <h2 class="title">Registrar Usuario</h2>
                     <label for="name">Nombre: </label>
-                    <input class="form__imput" type="text"  id="name">
+                    <input class="form__imput" type="text"  id="name" required maxlength="20">
                     <label for="email">Correo:</label>
-                    <input class="form__imput" type="email" id="email">
+                    <input class="form__imput" type="email" id="email" required>
                     <label for="password">Contraseña:</label>
-                    <input class="form__imput" type="password" id="password">
+                    <input class="form__imput" type="password" id="password" maxlength="8" minlength="4" required>
                     <div class="form__btns">
                         <button class="form_btn" onclick="document.registerForm.reset()"> Limpiar Formulario</button>
-                        <button class="form_btn" onclick="createUser()" type="submit"> Crear Usuario</button>
+                        <button class="form_btn" onclick="registerValidations()" type="submit"> Crear Usuario</button>
                     </div>
                     
                 </form>
@@ -217,6 +217,7 @@
         </div>
       </div>
     </main>
-    <script src="./js/register.js"></script>
+    <script src="./js/validations.js" ></script>
+    <script src="./js/register.js" ></script>
 </body>
 </html>
