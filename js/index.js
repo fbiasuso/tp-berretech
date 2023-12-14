@@ -1,4 +1,4 @@
-const elementCreator=(post,element,tagContainer,className = null)=>{
+const elementCreator=(post,element,tagContainer,className = null,isSearch = false)=>{
         
   /* console.log(post); */
       
@@ -57,9 +57,12 @@ articleNode.id = "post-"+post.id;
       articleNode.appendChild(newNode);
   
   }    
-      
-       const firstChild = element.firstElementChild;
-      element.insertBefore(articleNode, firstChild.nextSibling);
+    const firstChild = element.firstElementChild;
+    /* const childBefore = isSearch ? firstChild : firstChild.nextSibling; */
+   (post.isSticky && !isSearch) ? element.replaceChild(articleNode, firstChild)
+    : element.insertBefore(articleNode, firstChild.nextSibling);
+    
+       
 }
 
 const searchPosts = ()=>{
@@ -89,8 +92,18 @@ const searchPosts = ()=>{
         child && mainContainer.removeChild(child);
       }
      });
-   
-     searchResult.forEach(post => (post.isPublish) && elementCreator(post,mainContainer,"article","card-news")
+
+     if(!document.getElementById("searchedPosts")){
+        const articleNode = document.createElement("article");
+        articleNode.className = "card-news";
+        articleNode.id = "searchedPosts";
+        const textNode = document.createTextNode("Resultados de la búsqueda:");
+        articleNode.appendChild(textNode);
+        const firstChild =  mainContainer.firstElementChild;
+        mainContainer.insertBefore(articleNode,  firstChild);
+      }
+
+     searchResult.forEach(post => (post.isPublish) && elementCreator(post,mainContainer,"article","card-news",true)
      ); 
 
 }
@@ -103,6 +116,11 @@ const showPosts =() =>{
   const mainContainer = document.getElementById("main");
   
   if(posts){
+    
+    const stickyPost = posts.find((object) => (object.isSticky === true && object.isPublish === true));
+    elementCreator(stickyPost,mainContainer,"article","card-news")
+       
+
     posts.forEach(post => (post.isPublish && !post.isSticky) && elementCreator(post,mainContainer,"article","card-news")); 
   } else {
     const articleNode = document.createElement("article");
