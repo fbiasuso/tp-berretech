@@ -1,7 +1,8 @@
-const createUser = ()=>{
-    const name = document.getElementById("name").value; 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+const createUser = (email,name,password)=>{
+    // const name = document.getElementById("name").value; 
+    // const email = document.getElementById("email").value;
+    // const password = document.getElementById("password").value;
+
 
 
     const arrayUsers = JSON.parse(localStorage.getItem("users"))? JSON.parse(localStorage.getItem("users")) : [];
@@ -13,6 +14,8 @@ const createUser = ()=>{
     arrayUsers.push(user)
     
     localStorage.setItem("users", JSON.stringify(arrayUsers));
+
+    alert("El usuario se creo correctamente. Ahora sera reedirigido para iniciar sesion.")
 
 
     
