@@ -68,3 +68,36 @@ const loginValidations =()=>{
     
     document.loginForm.submit();
 }
+
+const registerValidations = () =>{
+    const email = document.getElementById("email");
+    const name = document.getElementById('name');
+    const password = document.getElementById('password');
+    let arrayUsers = JSON.parse(localStorage.getItem("users"))? JSON.parse(localStorage.getItem("users")) : [];
+    let user = arrayUsers ? arrayUsers.find((object) => object.email === email.value ) : "";
+
+    
+    if (!emailValidations(email)) {
+        
+        return   elementCreator(email,"span","Email inválido","emailError","validationError");
+    }
+
+    if (user) {
+        return elementCreator(email,"span","El usuario ya esta registrado","emailError","validationError");
+    }
+    killElement(email,"emailError");
+    
+    if (!password.value) {
+        return elementCreator(password,"span","La contraseña esta vacia","passwordlError","validationError");
+    }
+
+    killElement(password,"passwordlError");
+    
+    
+    createUser(email.value,name.value,password.value);
+     document.registerForm.submit()
+
+
+    
+    
+}

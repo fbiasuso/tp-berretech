@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <title>BerreTech | El mundo de la tecnología en tu pantallla</title>
   </head>
-  <body>
+  <body onload="showPosts()">
     <header>
       <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -155,18 +155,23 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >
+                  onclick="isLogged()">
                   Área Personal
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li class="sacarPunto">
-                    <a class="dropdown-item" href="./error404.html"
+                    <a id="navbar-login" class="dropdown-item" href="./login.html"
                       >Iniciar Sesión</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./error404.html"
+                    <a id="navbar-reg-name" class="dropdown-item" href="./register.html"
                       >Registrarse</a
+                    >
+                  </li>
+                  <li>
+                    <a id="navbar-admin" class="dropdown-item"
+                      ></a
                     >
                   </li>
                   <li>
@@ -213,11 +218,11 @@
     </section>
     <section id="news" class="container my-4">
       <div class="row justify-content-center">
-        <main class="col-12 col-md-8 mt-2">
-          <article class="card-news">
+        <main id="main" class="col-12 col-md-8 mt-2">
+           <article id="stikyPost" class="card-news">
             <img
               class="card-news__image"
-              src="./img/posts/post-1.jpg"
+              src="./img/posts/post-3.jpg"
               alt="Letras IA en fondo abstracto"
             />
             <h2>
@@ -239,58 +244,10 @@
               desde la salud hasta el transporte. Sin embargo, uno de los
               lugares...
             </p>
-            <a class="card-news__btn" href="./posts/post-1.html">Ver más</a>
-          </article>
-          <article class="card-news">
-            <img
-              class="card-news__image"
-              src="./img/posts/post-2.jpg"
-              alt="Teléfono inteligente"
-            />
-            <h2>Las Tendencias de Smartphones que Dominarán el 2023</h2>
-            <h3>
-              <img
-                class="card-news__author"
-                src="./img/team/francisco.png"
-              />Francisco - 01/10/2023 -
-              <a class="card-news__category" href="./error404.html"
-                >Celulares</a
-              >
-            </h3>
-            <p>
-              El mundo de la telefonía móvil es un campo en constante evolución,
-              y el año 2023 no será una excepción. A medida que nos adentramos
-              en un nuevo año, es emocionante anticipar las tendencias que
-              dominarán el mercado...
-            </p>
-            <a class="card-news__btn" href="./posts/post-2.html">Ver más</a>
-          </article>
-          <article class="card-news">
-            <img
-              class="card-news__image"
-              src="./img/posts/post-3.jpg"
-              alt="Pantalla de computadora con código"
-            />
-            <h2>
-              Lenguajes de Programación Populares y sus Aplicaciones en el Mundo
-              Real
-            </h2>
-            <h3>
-              <img class="card-news__author" src="./img/team/pablo.jpg" />Pablo
-              - 25/09/2023 -
-              <a class="card-news__category" href="./error404.html"
-                >Programación</a
-              >
-            </h3>
-            <p>
-              La elección de un lenguaje de programación es una de las
-              decisiones más cruciales que un desarrollador debe tomar.
-              Diferentes lenguajes ofrecen diferentes características y
-              ventajas, y conocer su aplicación en el mundo....
-            </p>
             <a class="card-news__btn" href="./posts/post-3.html">Ver más</a>
           </article>
-          <div class="pagination gap-2">
+          
+          <div id="pagination" class="pagination gap-2">
             <div><spam>Mostrando 3 de 150 articulos.</spam></div>
             <div class="pagination__nav">
               <span class="pagination__btn pagination__btn--disabled" disabled
@@ -493,6 +450,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/index.js"></script>
+    <script src="./js/navbar.js"></script>
     <footer class="footer">
       <div class="container text-center">
         <div class="row d-flex align-items-center">

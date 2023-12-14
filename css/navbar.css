@@ -1,6 +1,5 @@
-*,
-ul,
-li {
+.AreaPersonal ul,
+.AreaPersonal li {
   padding: 0;
   margin: 0;
   list-style: none;
