@@ -7,7 +7,7 @@ body {
 }
 
 .postList {
-  height: 100vh;
+  height: 1500px;
 }
 .postList__head {
   display: flex;
