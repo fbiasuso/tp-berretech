@@ -155,23 +155,23 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >
+                  onclick="isLogged()">
                   Área Personal
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li class="sacarPunto">
-                    <a class="dropdown-item" href="./login.html"
+                    <a id="navbar-login" class="dropdown-item" href="./login.html"
                       >Iniciar Sesión</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./register.html"
+                    <a id="navbar-reg-name" class="dropdown-item" href="./register.html"
                       >Registrarse</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./admin.html"
-                      >Administrar</a
+                    <a id="navbar-admin" class="dropdown-item"
+                      ></a
                     >
                   </li>
                   <li>
@@ -450,6 +450,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/index.js"></script>
+    <script src="./js/navbar.js"></script>
     <footer class="footer">
       <div class="container text-center">
         <div class="row d-flex align-items-center">
